@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dda7015d-9508-443d-986d-24e429b83bcf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Cliente/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cliente/Cliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Cliente/EnviarMensagem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cliente/EnviarMensagem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Cliente/GUI_Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cliente/GUI_Cliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Cliente/Receive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cliente/Receive.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI_Cliente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI_Cliente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI_Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI_Cliente.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Cliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="320">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,7 +31,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI_Cliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-295">
+            <state relative-caret-position="375">
               <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -102,6 +95,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,7 +112,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,7 +160,7 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19756502" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19977863" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -224,12 +217,19 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GUI_Cliente.form">
-      <provider selected="true" editor-type-id="ui-designer" />
+    <entry file="file://$PROJECT_DIR$/src/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI_Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-295">
+        <state relative-caret-position="375">
           <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -237,15 +237,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/GUI_Cliente.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
 </project>

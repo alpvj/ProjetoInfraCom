@@ -5,12 +5,12 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Cliente {
     public static void main(String[] args) throws IOException {
-
         int port = 8888;
-        String servidorIP = "172.20.4.166";
+        String servidorIP = "G3C04";
         InetAddress adress = InetAddress.getByName(servidorIP);
         DatagramSocket clientSocket = new DatagramSocket(35353); // msgs do cliente
         DatagramSocket statusSocket = new DatagramSocket(8008); // msgs de status
@@ -117,7 +117,7 @@ class Receive extends Thread {
                 String msg = new String(receivePacket.getData());
                 msg = msg.trim();
                 System.out.println("Mensagem recebida com sucesso!");
-                this.graphicGui.textArea1.append(msg);
+                this.graphicGui.textArea1.append(msg + "\n");
             }catch (Exception e){
                 System.out.println("Error na Thread de Receive: " + e);
             }
