@@ -12,7 +12,7 @@ public class Cliente {
         int port = 8888;
         String servidorIP = "172.20.4.166";
         InetAddress adress = InetAddress.getByName(servidorIP);
-        DatagramSocket clientSocket = new DatagramSocket(8088); // msgs do cliente
+        DatagramSocket clientSocket = new DatagramSocket(35353); // msgs do cliente
         DatagramSocket statusSocket = new DatagramSocket(8008); // msgs de status
 
         Socket socket = new Socket(adress, port); // inicia conexão com servidor
@@ -78,17 +78,19 @@ class EnviarMensagem extends Thread{
     public void run() {
         while(true){
             //Enquanto o Cliente2 esta ON e TEM elementos na fila de envio, envie
-            while(GUI.client_is_Off == false && GUI.filaDeEnvio.isEmpty() == false){
-                String msg = GUI.filaDeEnvio.remove();
+            this.GUI.FilaSize.setText(this.GUI.filaDeEnvio.size()+"");
+            while(this.GUI.client_is_Off == false && this.GUI.filaDeEnvio.isEmpty() == false){
+                String msg = this.GUI.filaDeEnvio.remove();
                 msg = this.Nome + ": " + msg + "\n";
                 try{
                     InetAddress address = InetAddress.getByName(this.IP);
                     byte[] sendData = msg.getBytes();
-                    DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, address, 8088);
+                    DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, address, 35353);
                     this.socket.send(sendPacket);
                     System.out.println("Mensagem enviada com sucesso!");
                 }catch (Exception e){
                     System.out.println("Error na Thread de EnviarMsg: " + e);
+                    e.printStackTrace();
                 }
             }
 
@@ -107,6 +109,7 @@ class Receive extends Thread {
 
     public void run() {
         while(true){
+            //System.out.println(this.graphicGui.textArea1.getX());
             byte[] receiveData = new byte[1024];
             DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
             try{
@@ -114,7 +117,7 @@ class Receive extends Thread {
                 String msg = new String(receivePacket.getData());
                 msg = msg.trim();
                 System.out.println("Mensagem recebida com sucesso!");
-                graphicGui.textArea1.append(msg);
+                this.graphicGui.textArea1.append(msg);
             }catch (Exception e){
                 System.out.println("Error na Thread de Receive: " + e);
             }

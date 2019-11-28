@@ -15,7 +15,8 @@ public class GUI_Cliente {
     public JTextField textField1;
     public JButton enviarButton;
     private JTextArea statusCliente;
-    private JTextArea IPdoOutro;
+    public JTextArea IPdoOutro;
+    public JTextArea FilaSize;
 
     // LOGICA
     public boolean client_is_Off;
@@ -29,7 +30,7 @@ public class GUI_Cliente {
 
     public GUI_Cliente(DatagramSocket socket) {
         this.ip = "0";
-        this.port = 8088;
+        this.port = 35353;
         this.socket = socket;
         this.client_is_Off = true;
         this.filaDeEnvio = new LinkedList<>();
@@ -88,3 +89,4 @@ public class GUI_Cliente {
         }
     }
 }
+
