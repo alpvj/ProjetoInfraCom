@@ -61,6 +61,9 @@ public class GUI_Cliente {
 
     public void setInterface(){
         this.textArea1.setEditable(false);
+        this.IPdoOutro.setEditable(false);
+        this.statusCliente.setEditable(false);
+        this.FilaSize.setEditable(false);
         JFrame janela = new JFrame();
         janela.setContentPane(panel1);
         janela.setVisible(true);
@@ -76,7 +79,7 @@ public class GUI_Cliente {
     }
 
     public void init() {
-        textArea1.append("Bem-Vindo ao ZapGram! \n");
+        this.textArea1.append("Bem-Vindo ao ZapGram! \n");
     }
 
     public void setClientOff(String msg) {
