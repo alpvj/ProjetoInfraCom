@@ -23,26 +23,26 @@ public class Servidor {
             String IPAddressA = socket1.getRemoteSocketAddress().toString();
             server.IP1 = IPAddressA.substring(1).split(":")[0];
             System.out.println(server.IP1);
+            GUI.IP_Cliente1.setText(server.IP1);
             //Receber cliente 2
             System.out.println("Esperando o segundo se conectar");
             Socket socket2 = tmpSocket.accept();
             String IPAddressB = socket2.getRemoteSocketAddress().toString();
             server.IP2 = IPAddressB.substring(1).split(":")[0];
             System.out.println(server.IP2);
+            GUI.IP_Cliente2.setText(server.IP2);
             //Enviar os IPs para os clientes respectivos
             DataOutputStream IPtoClientB = new DataOutputStream(socket2.getOutputStream());
             DataOutputStream IPtoClientA = new DataOutputStream(socket1.getOutputStream());
             IPtoClientA.writeUTF(server.IP2);
             IPtoClientB.writeUTF(server.IP1);
+            //Inicializar as threads
+            ReceberStatus threadReceber = new ReceberStatus(server, GUI);
+            EnviarStatus threadEnviar = new EnviarStatus(server, GUI);
+            threadReceber.start(); threadEnviar.start();
         }catch (Exception e){
             System.out.println(e);
         }
-
-        //Inicializar as threads
-        ReceberStatus threadReceber = new ReceberStatus(server, GUI);
-        EnviarStatus threadEnviar = new EnviarStatus(server, GUI);
-        threadReceber.start(); threadEnviar.start();
-
     }
 }
 
@@ -98,8 +98,8 @@ class ReceberStatus extends Thread{
             InetAddress address1 = InetAddress.getByName(this.servidor.IP1);
             InetAddress address2 = InetAddress.getByName(this.servidor.IP2);
             while (true){
-                boolean status1 = address1.isReachable(1000);
-                boolean status2 = address2.isReachable(1000);
+                boolean status1 = address1.isReachable(200);
+                boolean status2 = address2.isReachable(200);
                 this.servidor.atualizarStatus1(status1, status2);
                 if (status1)
                     this.GUI.Cliente1.setText("Cliente 1: Online");
