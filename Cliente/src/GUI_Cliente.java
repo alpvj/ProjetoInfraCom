@@ -52,14 +52,14 @@ public class GUI_Cliente {
     }
     public void enviarMsg(){
         if (textField1.getText().length() > 0) {
-            filaDeEnvio.add(textField1.getText());
-            textArea1.append("Você: " + textField1.getText() + "\n");
-            textField1.setText("");
+            this.filaDeEnvio.add(textField1.getText());
+            this.textArea1.append("Você: " + textField1.getText() + "\n");
+            this.textField1.setText("");
         }
     }
 
     public void setInterface(){
-        textArea1.setEditable(false);
+        this.textArea1.setEditable(false);
         JFrame janela = new JFrame();
         janela.setContentPane(panel1);
         janela.setVisible(true);

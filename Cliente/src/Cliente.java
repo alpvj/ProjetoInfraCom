@@ -10,30 +10,30 @@ public class Cliente {
     public static void main(String[] args) throws IOException {
 
         int port = 8888;
-        String servidorIP = "G1C12";
+        String servidorIP = "172.20.4.166";
         InetAddress adress = InetAddress.getByName(servidorIP);
         DatagramSocket clientSocket = new DatagramSocket(8088); // msgs do cliente
-        DatagramSocket statuSocket = new DatagramSocket(8008); // msgs de status
+        DatagramSocket statusSocket = new DatagramSocket(8008); // msgs de status
 
         Socket socket = new Socket(adress, port); // inicia conexão com servidor
         GUI_Cliente graphicUi = new GUI_Cliente (clientSocket);
-
+        System.out.println("Conectei");
         DataInputStream entrada = new DataInputStream(socket.getInputStream()); // pega mensagem do servidor
-
         String info = entrada.readUTF();
         String clientIP = info;
 
-        System.out.println("IP do Outro client: " + clientIP);
+        System.out.println("IP do outro cliente: " + clientIP);
         graphicUi.setIp(clientIP);
         graphicUi.init();
 
-        Thread receive = new Receive(clientSocket, graphicUi);
-        Thread status = new Status(statuSocket, graphicUi);
-        Thread enviar = new EnviarMensagem(clientIP, graphicUi, clientSocket, "Andre");
+        Receive receive = new Receive(clientSocket, graphicUi);
+        Status status = new Status(statusSocket, graphicUi);
+        EnviarMensagem enviar = new EnviarMensagem(clientIP, graphicUi, clientSocket, "Andre");
 
         receive.start();
         status.start();
         enviar.start();
+
     }
 }
 
@@ -80,7 +80,7 @@ class EnviarMensagem extends Thread{
             //Enquanto o Cliente2 esta ON e TEM elementos na fila de envio, envie
             while(GUI.client_is_Off == false && GUI.filaDeEnvio.isEmpty() == false){
                 String msg = GUI.filaDeEnvio.remove();
-                msg = this.Nome + ": " + msg;
+                msg = this.Nome + ": " + msg + "\n";
                 try{
                     InetAddress address = InetAddress.getByName(this.IP);
                     byte[] sendData = msg.getBytes();
