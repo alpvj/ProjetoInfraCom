@@ -22,6 +22,11 @@ public class Cliente {
         String info = entrada.readUTF();
         String clientIP = info;
 
+        RTPPacket rtpPacket = new RTPPacket();
+        sendAudio sendAudio = new sendAudio(rtpPacket,InetAddress.getByName(clientIP),35353);
+        ReceiveAudio receiveAudio = new ReceiveAudio(rtpPacket);
+
+
         System.out.println("IP do outro cliente: " + clientIP);
         graphicUi.setIp(clientIP);
         graphicUi.init();
@@ -30,6 +35,8 @@ public class Cliente {
         Status status = new Status(statusSocket, graphicUi);
         EnviarMensagem enviar = new EnviarMensagem(clientIP, graphicUi, clientSocket, "Andre");
 
+        receiveAudio.start();
+        sendAudio.start();
         receive.start();
         status.start();
         enviar.start();
