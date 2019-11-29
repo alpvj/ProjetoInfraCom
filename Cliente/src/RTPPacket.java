@@ -12,13 +12,13 @@ public class RTPPacket {
 
     }
 
-    public void sendPacket(InetAddress IPRemetente,int PortaRemetente, byte[] data) throws IOException {
+    public void sendPacket(InetAddress IPDestinatário ,int PortaDestinatário, byte[] data) throws IOException {
         RTP pacote = new RTP(this.numSeq, data);
         byte[] RTPPacket = pacote.getPacket();
 
-        this.socket = new DatagramSocket();
+        this.socket = new DatagramSocket(8050);
         DatagramPacket pkt = new DatagramPacket( RTPPacket, RTPPacket.length,
-                IPRemetente, PortaRemetente );
+                IPDestinatário, PortaDestinatário );
         this.socket.send(pkt);
 
         increaseSeqNumber();

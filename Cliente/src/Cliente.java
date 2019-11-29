@@ -23,7 +23,7 @@ public class Cliente {
         String clientIP = info;
 
         RTPPacket rtpPacket = new RTPPacket();
-        sendAudio sendAudio = new sendAudio(rtpPacket,InetAddress.getByName(clientIP),35353);
+        sendAudio sendAudio = new sendAudio(rtpPacket,InetAddress.getByName(clientIP),8050);
         ReceiveAudio receiveAudio = new ReceiveAudio(rtpPacket);
 
 
