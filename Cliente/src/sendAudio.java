@@ -1,18 +1,16 @@
 import javax.sound.sampled.*;
+import java.io.ByteArrayOutputStream;
+import java.net.*;
 import java.util.Scanner;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.InetAddress;
-import java.net.Socket;
 
 public class sendAudio extends Thread {
     private InetAddress IPremetente;
     private int PortaRemetente;
     private RTPPacket pacote;
 
-    public sendAudio(RTPPacket pacote, InetAddress IPRemetente,int PortaRemetente) throws IOException {
+    public sendAudio(RTPPacket pacote, InetAddress IPRemetente, int PortaRemetente) throws IOException {
         this.IPremetente = IPRemetente;
         this.PortaRemetente = PortaRemetente;
         this.pacote = pacote;
@@ -20,37 +18,56 @@ public class sendAudio extends Thread {
 
     public void run() {
 
-        AudioFormat format = new AudioFormat(44100, 16, 2, true, true);
-
-        DataLine.Info targetInfo = new DataLine.Info(TargetDataLine.class, format);
-        DataLine.Info sourceInfo = new DataLine.Info(SourceDataLine.class, format);
-
+        AudioFormat format = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, 44100, 16, 2, 4, 44100, true);
+        TargetDataLine microphone;
+        //SourceDataLine speakers;
         try {
-            TargetDataLine targetLine = (TargetDataLine) AudioSystem.getLine(targetInfo);
-            targetLine.open(format);
-            targetLine.start();
+            microphone = AudioSystem.getTargetDataLine(format);
 
-            SourceDataLine sourceLine = (SourceDataLine) AudioSystem.getLine(sourceInfo);
-            sourceLine.open(format);
-            sourceLine.start();
+            DataLine.Info info = new DataLine.Info(TargetDataLine.class, format);
+            microphone = (TargetDataLine) AudioSystem.getLine(info);
+            microphone.open(format);
 
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
             int numBytesRead;
-            byte[] targetData = new byte[targetLine.getBufferSize() / 5];
+            int CHUNK_SIZE = 1024;
+            byte[] data = new byte[microphone.getBufferSize() / 5];
+            microphone.start();
 
-            while (true) {
-                numBytesRead = targetLine.read(targetData, 0, targetData.length);
 
-                if (numBytesRead == -1)	break;
+//            DataLine.Info dataLineInfo = new DataLine.Info(SourceDataLine.class, format);
+//            speakers = (SourceDataLine) AudioSystem.getLine(dataLineInfo);
+//            speakers.open(format);
+//            speakers.start();
 
-                sourceLine.write(targetData, 0, numBytesRead);
 
-                this.pacote.sendPacket(this.IPremetente, this.PortaRemetente,targetData);
+            // Configure the ip and port
+            //String hostname = "localhost";
+            //int port = 5555;
+
+            //InetAddress address = InetAddress.getByName(hostname);
+            //DatagramSocket socket = new DatagramSocket();
+            byte[] buffer = new byte[1024];
+            for (; ; ) {
+                numBytesRead = microphone.read(data, 0, CHUNK_SIZE);
+                //  bytesRead += numBytesRead;
+                // write the mic data to a stream for use later
+                out.write(data, 0, numBytesRead);
+                // write mic data to stream for immediate playback
+                //speakers.write(data, 0, numBytesRead);
+                //DatagramPacket request = new DatagramPacket(data, numBytesRead, address, port);
+                //socket.send(request);
+                this.pacote.sendPacket(IPremetente, PortaRemetente, data);
             }
-        }
-        catch (Exception e) {
-            System.err.println(e);
-        }
 
-
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        } catch (SocketException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

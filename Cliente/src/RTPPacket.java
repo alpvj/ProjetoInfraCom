@@ -8,17 +8,15 @@ public class RTPPacket {
     public int numSeq = 1; // Numero de sequencia não é Zero-Based.
     DatagramSocket socket;
 
-    public RTPPacket(){
-
+    public RTPPacket(int PortaDestinatário) throws IOException {
+        this.socket = new DatagramSocket(PortaDestinatário);
     }
 
     public void sendPacket(InetAddress IPDestinatário ,int PortaDestinatário, byte[] data) throws IOException {
         RTP pacote = new RTP(this.numSeq, data);
         byte[] RTPPacket = pacote.getPacket();
 
-        this.socket = new DatagramSocket(8050);
-        DatagramPacket pkt = new DatagramPacket( RTPPacket, RTPPacket.length,
-                IPDestinatário, PortaDestinatário );
+        DatagramPacket pkt = new DatagramPacket( RTPPacket, RTPPacket.length, IPDestinatário, PortaDestinatário);
         this.socket.send(pkt);
 
         increaseSeqNumber();
@@ -36,16 +34,15 @@ public class RTPPacket {
 
         byte[] audioData = new byte[1024]; // SETAR QUANTIDADE DE BYTES DE UM PACOTE DE AUDIO
 
-        System.out.println(RTPPacket.length);
+
 
         for(int i=0;i<RTPPacket.length; i++){
             if(i > 12) /*ACESSANDO APENAS O DATA DO RTPPacket*/{
                 audioData[i] = RTPPacket[i];
             }
         }
-
         return audioData;
-}
+    }
 
     private void increaseSeqNumber(){
         this.numSeq++;
