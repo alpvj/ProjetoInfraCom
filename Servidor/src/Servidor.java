@@ -93,6 +93,19 @@ class ReceberStatus extends Thread{
         this.GUI = gui;
     }
 
+   /* public void timeLimit(int startTime)
+
+    public void testarStatus() {
+        while (true) {
+            long startTime = System.currentTimeMillis();
+            while (true) {
+
+            }
+        }
+
+        long limite = System.currentTimeMillis() - startTime;
+    }*/
+
     public void run(){
         try {
             InetAddress address1 = InetAddress.getByName(this.servidor.IP1);

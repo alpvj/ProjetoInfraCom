@@ -15,11 +15,16 @@ public class GUI_Cliente {
     public JTextField textField1;
     public JButton enviarButton;
     private JTextArea statusCliente;
-    public JTextArea IPdoOutro;
+
+
     public JTextArea FilaSize;
+    private JCheckBox mutarMicrofoneCheckBox;
+    private JCheckBox onlineOfflineCheckBox;
+    private JLabel meuStatus;
 
     // LOGICA
     public boolean client_is_Off;
+    public boolean muteMicrofone;
 
     // INFORMACOES
     public String ip;
@@ -50,6 +55,34 @@ public class GUI_Cliente {
             }
             }
         });
+
+        mutarMicrofoneCheckBox.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent itemEvent) {
+                if(itemEvent.getStateChange() == itemEvent.DESELECTED){
+                    muteMicrofone = false;
+                }
+                else{
+                    muteMicrofone = true;
+                }
+            }
+
+        });
+
+        onlineOfflineCheckBox.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent itemEvent) {
+                if(itemEvent.getStateChange() == itemEvent.DESELECTED){
+                    meuStatus.setText("Status: Online");
+                }
+                else{
+                    meuStatus.setText("Status: Offline");
+                }
+            }
+
+        });
+
+
     }
     public void enviarMsg(){
         if (textField1.getText().length() > 0) {
@@ -61,7 +94,6 @@ public class GUI_Cliente {
 
     public void setInterface(){
         this.textArea1.setEditable(false);
-        this.IPdoOutro.setEditable(false);
         this.statusCliente.setEditable(false);
         this.FilaSize.setEditable(false);
         JFrame janela = new JFrame();
@@ -73,10 +105,7 @@ public class GUI_Cliente {
 
     }
 
-    public void setIp (String ip) {
-        this.ip = ip;
-        this.IPdoOutro.setText(ip);
-    }
+
 
     public void init() {
         this.textArea1.append("Bem-Vindo ao ZapGram! \n");

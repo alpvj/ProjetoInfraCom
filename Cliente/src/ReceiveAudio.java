@@ -62,7 +62,7 @@ public class ReceiveAudio extends Thread {
                     //String quote = new String(buffer, 0, response.getLength());
                     //speakers.write(microphone, 0, numBytesRead);
                     String quote = buffer.toString();
-                    System.out.println(quote);
+//                    System.out.println(quote);
 
                     //System.out.println();
                     //Thread.sleep(10000);

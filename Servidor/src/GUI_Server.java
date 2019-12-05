@@ -14,12 +14,10 @@ public class GUI_Server {
         this.IP_Cliente1.setEditable(false);
         this.IP_Cliente2.setEditable(false);
         frame.setContentPane(Panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        Panel.setSize(540,540);
+        Panel.setSize(1000,1000);
         frame.setVisible(true);
         this.IP_Cliente1.setText("Esperando o primeiro se conectar");
         this.IP_Cliente2.setText("Esperando o segundo se conectar");
-
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }

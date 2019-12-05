@@ -2,10 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77394dc3-2868-4eef-9f87-6a29dca47e15" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Cliente/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cliente/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/EnviarMensagem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/EnviarMensagem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/RTP.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/RTP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/RTPPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/RTPPacket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/Receive.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/Receive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/ReceiveAudio.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/ReceiveAudio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/sendAudio.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/sendAudio.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cliente/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/src/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cliente/src/RTPPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/src/RTPPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/src/GUI_Cliente.form" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/src/GUI_Cliente.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/src/GUI_Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/src/GUI_Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/src/ReceiveAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/src/ReceiveAudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/src/sendAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/src/sendAudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Servidor/EnviarStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Servidor/EnviarStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Servidor/GUI_Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Servidor/GUI_Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Servidor/ReceberStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Servidor/ReceberStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Servidor/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Servidor/Servidor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI_Server.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI_Server.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI_Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI_Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servidor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,15 +45,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Servidor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+            <state relative-caret-position="724">
+              <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI_Server.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -53,6 +80,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/GUI_Server.java" />
+        <option value="$PROJECT_DIR$/src/GUI_Server.form" />
         <option value="$PROJECT_DIR$/src/Servidor.java" />
       </list>
     </option>
@@ -64,7 +93,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="927" />
@@ -78,8 +107,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -98,15 +125,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Servidor.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
+            <path>
+              <item name="Servidor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Servidor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI_Server" type="e9f4de52:FormNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cliente" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -148,10 +183,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18539014" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08795309" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -160,7 +195,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295063" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -180,18 +215,22 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Servidor.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI_Server.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI_Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        <state relative-caret-position="272">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI_Server.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI_Server.form">
-      <provider selected="true" editor-type-id="ui-designer" />
+    <entry file="file://$PROJECT_DIR$/src/Servidor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

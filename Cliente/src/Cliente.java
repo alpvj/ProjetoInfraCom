@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Cliente {
     public static void main(String[] args) throws IOException {
         int port = 8888;
-        String servidorIP = "G3C38";
+        String servidorIP = "G3C49";
         InetAddress adress = InetAddress.getByName(servidorIP);
         DatagramSocket clientSocket = new DatagramSocket(35353); // msgs do cliente
         DatagramSocket statusSocket = new DatagramSocket(8008); // msgs de status
@@ -23,12 +23,11 @@ public class Cliente {
         String clientIP = info;
 
         RTPPacket rtpPacket = new RTPPacket(31244);
-        sendAudio sendAudio = new sendAudio(rtpPacket,InetAddress.getByName(clientIP),31244);
+        sendAudio sendAudio = new sendAudio(rtpPacket,InetAddress.getByName(clientIP),31244, graphicUi);
         ReceiveAudio receiveAudio = new ReceiveAudio(rtpPacket);
 
 
         System.out.println("IP do outro cliente: " + clientIP);
-        graphicUi.setIp(clientIP);
         graphicUi.init();
 
         Receive receive = new Receive(clientSocket, graphicUi);
