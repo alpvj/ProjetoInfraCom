@@ -1,9 +1,6 @@
 import javax.swing.*;
-import javax.xml.crypto.Data;
 import java.awt.event.*;
-import java.beans.PropertyChangeListener;
 import java.net.*;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -16,14 +13,14 @@ public class GUI_Cliente {
     public JButton enviarButton;
     private JTextArea statusCliente;
 
-
+    public JLabel meuStatus;
     public JTextArea FilaSize;
     private JCheckBox mutarMicrofoneCheckBox;
     private JCheckBox onlineOfflineCheckBox;
-    private JLabel meuStatus;
 
     // LOGICA
     public boolean client_is_Off;
+    public boolean my_client_is_Off;
     public boolean muteMicrofone;
 
     // INFORMACOES
@@ -37,7 +34,8 @@ public class GUI_Cliente {
         this.ip = "0";
         this.port = 35353;
         this.socket = socket;
-        this.client_is_Off = true;
+        this.client_is_Off = false;
+        this.my_client_is_Off = false;
         this.filaDeEnvio = new LinkedList<>();
 
         setInterface();
@@ -74,9 +72,13 @@ public class GUI_Cliente {
             public void itemStateChanged(ItemEvent itemEvent) {
                 if(itemEvent.getStateChange() == itemEvent.DESELECTED){
                     meuStatus.setText("Status: Online");
+                    my_client_is_Off = false;
+                    System.out.println(my_client_is_Off);
                 }
                 else{
                     meuStatus.setText("Status: Offline");
+                    my_client_is_Off = true;
+                    System.out.println(my_client_is_Off);
                 }
             }
 
@@ -86,7 +88,9 @@ public class GUI_Cliente {
     }
     public void enviarMsg(){
         if (textField1.getText().length() > 0) {
-            this.filaDeEnvio.add(textField1.getText());
+            if (!my_client_is_Off) {
+                this.filaDeEnvio.add(textField1.getText());
+            }
             this.textArea1.append("Você: " + textField1.getText() + "\n");
             this.textField1.setText("");
         }

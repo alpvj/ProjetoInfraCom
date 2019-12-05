@@ -4,8 +4,6 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Cliente {
     public static void main(String[] args) throws IOException {
@@ -33,9 +31,12 @@ public class Cliente {
         Receive receive = new Receive(clientSocket, graphicUi);
         Status status = new Status(statusSocket, graphicUi);
         EnviarMensagem enviar = new EnviarMensagem(clientIP, graphicUi, clientSocket, "Andre");
+        SendStatus sendStatus = new SendStatus(statusSocket, graphicUi, adress);
+
 
         receiveAudio.start();
         sendAudio.start();
+        sendStatus.start();
         receive.start();
         status.start();
         enviar.start();
@@ -64,6 +65,35 @@ class Status extends Thread {
             }
         } catch (Exception e) {
             System.out.println("Error: " + e);
+        }
+    }
+}
+
+class SendStatus extends Thread {
+    private DatagramSocket statusSocket;
+    private GUI_Cliente gui;
+    private InetAddress serverIP;
+
+    public SendStatus(DatagramSocket skt, GUI_Cliente gui, InetAddress serverIP) {
+        this.statusSocket = skt;
+                     this.gui = gui;
+                this.serverIP = serverIP;
+            }
+
+            public void run() {
+                while (true) {
+                    System.out.print("");
+                    if (!gui.my_client_is_Off) {
+//                        System.out.println("Enviado");
+                        byte[] sendData = "ping".getBytes();
+                        DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, serverIP, 8008);
+                        try {
+                            this.statusSocket.send(sendPacket);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+
+            }
         }
     }
 }
@@ -115,15 +145,17 @@ class Receive extends Thread {
 
     public void run() {
         while(true){
-            //System.out.println(this.graphicGui.textArea1.getX());
             byte[] receiveData = new byte[1024];
             DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
+            System.out.println(graphicGui.my_client_is_Off);
             try{
                 this.clientSocket.receive(receivePacket);
                 String msg = new String(receivePacket.getData());
                 msg = msg.trim();
-                System.out.println("Mensagem recebida com sucesso!");
-                this.graphicGui.textArea1.append(msg + "\n");
+                if (!graphicGui.my_client_is_Off) {
+                    System.out.println("Mensagem recebida com sucesso!");
+                    this.graphicGui.textArea1.append(msg + "\n");
+                }
             }catch (Exception e){
                 System.out.println("Error na Thread de Receive: " + e);
             }

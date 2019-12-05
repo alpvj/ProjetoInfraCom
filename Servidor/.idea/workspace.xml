@@ -8,6 +8,8 @@
       <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/EnviarMensagem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/EnviarMensagem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/GUI_Cliente.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/RTP.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/RTP.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/RTPPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/RTPPacket.class" afterDir="false" />
@@ -16,14 +18,10 @@
       <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/Status.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cliente/out/production/Cliente/sendAudio.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/out/production/Cliente/sendAudio.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cliente/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/src/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cliente/src/GUI_Cliente.form" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/src/GUI_Cliente.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cliente/src/GUI_Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/src/GUI_Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cliente/src/ReceiveAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/src/ReceiveAudio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cliente/src/sendAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cliente/src/sendAudio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Servidor/EnviarStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Servidor/EnviarStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Servidor/GUI_Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Servidor/GUI_Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Servidor/ReceberStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Servidor/ReceberStatus.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Servidor/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Servidor/Servidor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI_Server.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI_Server.form" afterDir="false" />
@@ -45,8 +43,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Servidor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="724">
-              <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+            <state relative-caret-position="1489">
+              <caret line="103" column="40" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI_Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            <state relative-caret-position="153">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -80,9 +81,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/GUI_Server.java" />
-        <option value="$PROJECT_DIR$/src/GUI_Server.form" />
         <option value="$PROJECT_DIR$/src/Servidor.java" />
+        <option value="$PROJECT_DIR$/src/GUI_Server.form" />
+        <option value="$PROJECT_DIR$/src/GUI_Server.java" />
       </list>
     </option>
   </component>
@@ -94,8 +95,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
+    <option name="x" value="1001" />
     <option name="width" value="927" />
     <option name="height" value="1055" />
   </component>
@@ -107,6 +107,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,13 +137,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cliente" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -184,9 +187,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08795309" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08955224" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -195,7 +197,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -203,7 +205,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -215,22 +217,103 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/jre/lib/rt.jar!/java/time/Duration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI_Server.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI_Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Servidor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+        <state relative-caret-position="1489">
+          <caret line="103" column="40" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
