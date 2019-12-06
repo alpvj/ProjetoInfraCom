@@ -88,9 +88,7 @@ public class GUI_Cliente {
     }
     public void enviarMsg(){
         if (textField1.getText().length() > 0) {
-            if (!my_client_is_Off) {
-                this.filaDeEnvio.add(textField1.getText());
-            }
+            this.filaDeEnvio.add(textField1.getText());
             this.textArea1.append("Você: " + textField1.getText() + "\n");
             this.textField1.setText("");
         }

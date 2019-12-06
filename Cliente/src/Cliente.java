@@ -8,7 +8,7 @@ import java.net.Socket;
 public class Cliente {
     public static void main(String[] args) throws IOException {
         int port = 8888;
-        String servidorIP = "G3C49";
+        String servidorIP = "G3C39";
         InetAddress adress = InetAddress.getByName(servidorIP);
         DatagramSocket clientSocket = new DatagramSocket(35353); // msgs do cliente
         DatagramSocket statusSocket = new DatagramSocket(8008); // msgs de status
@@ -115,7 +115,7 @@ class EnviarMensagem extends Thread{
         while(true){
             //Enquanto o Cliente2 esta ON e TEM elementos na fila de envio, envie
             this.GUI.FilaSize.setText(this.GUI.filaDeEnvio.size()+"");
-            while(this.GUI.client_is_Off == false && this.GUI.filaDeEnvio.isEmpty() == false){
+            while(this.GUI.client_is_Off == false && this.GUI.filaDeEnvio.isEmpty() == false && !this.GUI.my_client_is_Off){
                 String msg = this.GUI.filaDeEnvio.remove();
                 msg = this.Nome + ": " + msg + "\n";
                 try{
