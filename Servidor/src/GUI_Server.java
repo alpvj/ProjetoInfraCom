@@ -10,7 +10,6 @@ public class GUI_Server {
 
     public GUI_Server(){
         JFrame frame = new JFrame("Servidor");
-
         frame.setContentPane(Panel);
         frame.pack();
         frame.setVisible(true);

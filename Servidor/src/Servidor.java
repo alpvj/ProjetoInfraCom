@@ -125,7 +125,7 @@ class ReceberStatus extends Thread{
             Instant before2 = Instant.now();
             Instant after1;
             Instant after2;
-            this.socket.setSoTimeout(250);
+            this.socket.setSoTimeout(1000);
             while (true){
                 try {
                     System.out.print("");
@@ -136,7 +136,7 @@ class ReceberStatus extends Thread{
                         after2 = Instant.now();
                         delta2 = Duration.between(before2, after2).toMillis();
                       //  System.out.println("Delta2: " + delta2);
-                        if (delta2 > 900) {
+                        if (delta2 > 1000) {
                             status2 = false;
                            // System.out.println("Cliente 2 off");
                         }
@@ -148,7 +148,7 @@ class ReceberStatus extends Thread{
                         after1 = Instant.now();
                         delta1 = Duration.between(before1, after1).toMillis();
                         //System.out.println("Delta1: " + delta1);
-                        if (delta1 > 900) {
+                        if (delta1 > 1000) {
                             status1 = false;
                            // System.out.println("Cliente 1 off");
                         }
@@ -161,7 +161,7 @@ class ReceberStatus extends Thread{
                     status2 = false;
                     this.servidor.atualizarStatus1(status1, status2);
                     setText(status1,status2);
-                    this.socket.setSoTimeout(250);
+                    this.socket.setSoTimeout(1000);
                 }
             }
         }catch (Exception e){
