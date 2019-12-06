@@ -128,6 +128,7 @@ class ReceberStatus extends Thread{
             this.socket.setSoTimeout(250);
             while (true){
                 try {
+                    System.out.print("");
                     this.socket.receive(receivePacket);
                     if (receivePacket.getAddress().toString().equals(address1.toString())) {
                         status1 = true;
@@ -135,7 +136,7 @@ class ReceberStatus extends Thread{
                         after2 = Instant.now();
                         delta2 = Duration.between(before2, after2).toMillis();
                       //  System.out.println("Delta2: " + delta2);
-                        if (delta2 > 1500) {
+                        if (delta2 > 900) {
                             status2 = false;
                            // System.out.println("Cliente 2 off");
                         }
@@ -147,7 +148,7 @@ class ReceberStatus extends Thread{
                         after1 = Instant.now();
                         delta1 = Duration.between(before1, after1).toMillis();
                         //System.out.println("Delta1: " + delta1);
-                        if (delta1 > 1500) {
+                        if (delta1 > 900) {
                             status1 = false;
                            // System.out.println("Cliente 1 off");
                         }
@@ -160,6 +161,7 @@ class ReceberStatus extends Thread{
                     status2 = false;
                     this.servidor.atualizarStatus1(status1, status2);
                     setText(status1,status2);
+                    this.socket.setSoTimeout(250);
                 }
             }
         }catch (Exception e){
