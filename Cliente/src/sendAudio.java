@@ -18,7 +18,7 @@ public class sendAudio extends Thread {
 
     public void run() {
 
-        boolean mute = graphicUi.muteMicrofone;
+        boolean mute = this.graphicUi.muteMicrofone;
 
         AudioFormat format = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, 44100, 16, 2, 4, 44100, true);
         TargetDataLine microphone;
@@ -34,13 +34,13 @@ public class sendAudio extends Thread {
             byte[] data = new byte[microphone.getBufferSize() / 5];
             microphone.start();
             while(true) {
-                mute = graphicUi.muteMicrofone;
+                mute = this.graphicUi.muteMicrofone;
                 System.out.print("");
-                while (!mute && !graphicUi.client_is_Off) {
-                    mute = graphicUi.muteMicrofone;
+                while (!mute && !this.graphicUi.client_is_Off && !this.graphicUi.my_client_is_Off) {
+                    mute = this.graphicUi.muteMicrofone;
                     numBytesRead = microphone.read(data, 0, CHUNK_SIZE);
                     out.write(data, 0, numBytesRead);
-                    this.pacote.sendPacket(IPremetente, PortaRemetente, data);
+                    this.pacote.sendPacket(this.IPremetente, this.PortaRemetente, data);
                 }
             }
 

@@ -83,10 +83,10 @@ class SendStatus extends Thread {
             public void run() {
                 while (true) {
                     System.out.print("");
-                    if (!gui.my_client_is_Off) {
+                    if (!this.gui.my_client_is_Off) {
 //                        System.out.println("Enviado");
                         byte[] sendData = "ping".getBytes();
-                        DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, serverIP, 8008);
+                        DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, this.serverIP, 8008);
                         try {
                             this.statusSocket.send(sendPacket);
                         } catch (IOException e) {
@@ -147,12 +147,12 @@ class Receive extends Thread {
         while(true){
             byte[] receiveData = new byte[1024];
             DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
-            System.out.println(graphicGui.my_client_is_Off);
+            System.out.println(this.graphicGui.my_client_is_Off);
             try{
                 this.clientSocket.receive(receivePacket);
                 String msg = new String(receivePacket.getData());
                 msg = msg.trim();
-                if (!graphicGui.my_client_is_Off) {
+                if (!this.graphicGui.my_client_is_Off) {
                     System.out.println("Mensagem recebida com sucesso!");
                     this.graphicGui.textArea1.append(msg + "\n");
                 }
